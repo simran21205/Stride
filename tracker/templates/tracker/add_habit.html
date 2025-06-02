@@ -1,0 +1,18 @@
+{% extends 'tracker/base.html' %}
+
+{% block content %}
+<div class="card shadow-sm p-4 bg-dark text-light rounded mx-auto" style="max-width: 600px;">
+    <h2 class="mb-3"><i class="fas fa-plus-circle"></i> Add a New Task</h2>
+    <p class="mb-4 text-muted">Fill out the details below to add a new task to your dashboard.</p>
+
+    <form method="post" novalidate>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="d-grid mt-3">
+            <button type="submit" class="btn btn-success">
+                <i class="fas fa-save"></i> Add Task
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}
