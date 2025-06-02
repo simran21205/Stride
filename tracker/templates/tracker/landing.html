@@ -1,0 +1,121 @@
+{% extends 'tracker/base.html' %}
+
+{% block content %}
+<div class="text-center my-5 text-light">
+    <h1 class="display-4 fw-bold mb-3">Welcome to STRIDE</h1>
+    <p class="lead mb-4">Track your daily progress, build lasting habits, and achieve your goals with ease.</p>
+    <p>
+        <a href="{% url 'signup' %}" class="btn btn-success btn-lg me-3"><i class="fas fa-user-plus me-2"></i>Create Account</a>
+        <a href="{% url 'login' %}" class="btn btn-outline-light btn-lg"><i class="fas fa-sign-in-alt me-2"></i>Login</a>
+    </p>
+</div>
+
+<!-- Quick Start Guide -->
+<section class="bg-dark text-light p-5 rounded mb-5">
+    <h2 class="mb-4">Quick Start Guide</h2>
+    <div class="row text-center">
+        <div class="col-md-4 mb-4">
+            <i class="fas fa-user-plus fa-3x mb-3 text-success"></i>
+            <h4>Create Your Account</h4>
+            <p>Sign up quickly and securely to get started.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+            <i class="fas fa-list-check fa-3x mb-3 text-success"></i>
+            <h4>Add Your Goals</h4>
+            <p>Customize and add daily activities or habits to track.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+            <i class="fas fa-chart-line fa-3x mb-3 text-success"></i>
+            <h4>Track Your Progress</h4>
+            <p>Monitor streaks, progress, and stay motivated every day.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="bg-secondary text-light p-5 rounded mb-5">
+    <h2 class="mb-4">Frequently Asked Questions</h2>
+    <div class="accordion" id="faqAccordion">
+        <div class="accordion-item bg-dark text-light">
+            <h2 class="accordion-header" id="faq1Heading">
+                <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                    Is my data private and secure?
+                </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse" aria-labelledby="faq1Heading" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Absolutely. Your data is stored securely and only accessible to you.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item bg-dark text-light">
+            <h2 class="accordion-header" id="faq2Heading">
+                <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                    Can I customize my goals?
+                </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2Heading" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Yes! You can add, edit, and delete your tracked items anytime.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item bg-dark text-light">
+            <h2 class="accordion-header" id="faq3Heading">
+                <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                    Is there a mobile app?
+                </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3Heading" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Currently, Momentum Tracker is web-based, but mobile apps are coming soon.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- User testimonials  -->
+<section class="bg-dark text-light py-5">
+    <div class="container">
+      <h3 class="mb-4 text-center">What Our Users Say</h3>
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <div class="card bg-secondary text-light h-100 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">"STRIDE changed how I stay consistent with my daily goals. The streaks keep me motivated!"</p>
+              <h6 class="card-subtitle mt-3">- Alex Johnson</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card bg-secondary text-light h-100 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">"Simple, clean interface and really helps me keep my habits on track. Love the dark mode!"</p>
+              <h6 class="card-subtitle mt-3">- Priya Singh</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card bg-secondary text-light h-100 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">"The streak system keep me motivated every day. Highly recommend STRIDE."</p>
+              <h6 class="card-subtitle mt-3">- Michael Lee</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+{% endblock %}
+
+{% block footer %}
+<footer class="bg-secondary text-light py-4 mt-5">
+    <div class="container text-center">
+        <h5>Contact Us</h5>
+        <p>Email: <a href="mailto:support@momentumtracker.com" class="text-light">support@stride.com</a> | Phone: 81783938572</p>
+        <p>© 2025 STRIDE . All rights reserved.</p>
+    </div>
+</footer>
+{% endblock %}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <title>STRIDE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --main-color: #4CAF50; /* soft green */
+            --accent-color: #81C784;
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+        }
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+        }
+      
+        .navbar, .btn-primary {
+            background-color: #388E3C !important; /* deeper green */
+            border-color: #388E3C !important;
+            font-weight: 600;
+        }
+
+        .btn-outline-primary {
+            color: var(--main-color);
+            border-color: var(--main-color);
+        }
+        .btn-outline-primary:hover {
+            background-color: var(--main-color);
+            color: white;
+        }
+        .list-group-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--card-bg);
+            border: none;
+            color: var(--text-color);
+        }
+        .card {
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            border: none;
+        }
+        a {
+            color: var(--accent-color);
+        }
+        a:hover {
+            color: var(--main-color);
+        }
+        .progress {
+            background-color: #333;
+        }
+        .progress-bar {
+            background-color: var(--main-color);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'landing' %}">
+                <i class="fas fa-seedling me-2"></i> STRIDE
+            </a>
+            <div>
+                {% if user.is_authenticated %}
+                    <a class="btn btn-light me-2" href="{% url 'habit_list' %}">
+                        <i class="fas fa-chart-line"></i> My Dashboard
+                    </a>
+                    <a class="btn btn-outline-light" href="{% url 'logout' %}">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
+                {% else %}
+                    <a class="btn btn-light me-2" href="{% url 'signup' %}">
+                        <i class="fas fa-user-plus"></i> Sign Up
+                    </a>
+                    <a class="btn btn-outline-light" href="{% url 'login' %}">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    {% block footer %}{% endblock %}
+
+</body>
+</html>
