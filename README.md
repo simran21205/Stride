@@ -41,6 +41,13 @@ It features user signup/login, habit creation, daily check-ins, streak tracking,
 
 ---
 
+## Add new Habit Page
+
+<img width="1440" alt="add new habits" src="https://github.com/user-attachments/assets/5304a315-ca9e-4f55-a4b1-b0b4dd4edefd" />
+
+
+---
+
 ## LogOut Page
 
 <img width="1440" alt="logout page" src="https://github.com/user-attachments/assets/4558ad79-017f-47b2-8b71-15d3b5572666" />
