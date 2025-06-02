@@ -1,4 +1,4 @@
-<img width="1440" alt="Screenshot 2025-06-02 at 20 27 17" src="https://github.com/user-attachments/assets/b22280c8-fd3d-46ef-b31f-8720d9387c65" /># Stride — Habit Tracker App 
+# Stride — Habit Tracker App 
 
 Stride is a Python and Django-based habit tracker that helps you log, monitor, and build consistent habits.  
 It features user signup/login, habit creation, daily check-ins, streak tracking, and dashboard summaries.
